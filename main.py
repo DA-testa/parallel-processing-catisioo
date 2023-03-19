@@ -5,18 +5,18 @@ def parallel_processing(n, m, data):
     # create the output pairs
 
     output = []
-    thread_number = []*n
+    thread_number = [0]*n
 
     for i in range (m):
-        next = thread_number.index(min(thread_number))
+        nextt = thread_number.index(min(thread_number))
 
-        beginning = thread_number[next]
+        beginning = thread_number[nextt]
         
         end = beginning + data[i]
 
-        thread_number[next] = end
+        thread_number[nextt] = end
 
-        output.append((next, beginning))
+        output.append((nextt, beginning))
 
 
     return output
